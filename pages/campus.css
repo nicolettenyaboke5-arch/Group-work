@@ -1,0 +1,940 @@
+/*header*/
+header{
+    background: linear-gradient(#041b01f2, rgba(1, 30, 4, 0.798)),
+                url("");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/*UNIVERSITY NAME*/
+header h1{
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 50px;
+    color: rgb(185,164,65);
+    letter-spacing: 4px;
+    text-shadow: 3px 3px 6px black;
+    margin-bottom: 10px;
+}
+
+/* Gold decorative line */
+header h1::after{
+    content: "";
+    display: block;
+    width: 180px;
+    height: 4px;
+    background-color: rgb(185,164,65);
+    margin: 15px auto;
+    border-radius: 20px;
+}
+
+/*=========================================
+            UNIVERSITY LOGO
+=========================================*/
+
+header img{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 5px solid rgb(185,164,65);
+    margin: 20px 0;
+    object-fit: cover;
+    background-color: white;
+}
+
+/*SLOGAN*/
+
+.slogan{
+    font-size: 24px;
+    font-style: italic;
+    color: #f5f5f5;
+    margin-bottom: 30px;
+}
+
+/*NAVIGATION BAR*/
+nav{
+    background-color: rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 50px;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+/* Remove bullets */
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Display links side by side */
+
+nav ul li{
+    display: inline-block;
+    margin: 0 8px;
+}
+
+/* Navigation links */
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+
+nav ul li a:hover{
+    background-color: rgb(185,164,65);
+    color: #0b1f5b;
+    box-shadow: 0 0 15px gold;
+}
+
+/*WELCOME SECTION*/
+
+#welcome{
+    width: 90%;
+    margin: 50px auto;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #eef2ff
+    );
+
+    border-radius: 20px;
+
+    box-shadow: 
+        0 10px 25px rgba(0,0,0,0.15);
+}
+
+
+/*WELCOME IMAGE*/
+
+.welcome-image{
+    flex: 1;
+}
+
+.welcome-image img{
+
+    width: 100%;
+    height: 350px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    border: 5px solid gold;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.3);
+}
+
+
+/*WELCOME TEXT*/
+
+.welcome-text{
+    flex: 1;
+}
+
+
+.welcome-text h2{
+
+    font-family: Georgia, serif;
+
+    font-size: 38px;
+
+    color:#1b3c73;
+
+    margin-bottom:20px;
+}
+
+
+.welcome-text p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#444;
+
+    text-align:justify;
+
+}
+
+
+/*BUTTON*/
+
+.welcome-text button{
+
+    margin-top:20px;
+    background:#1b3c73;
+    color:white;
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    font-size:17px;
+    cursor:pointer;
+}
+
+.welcome-text button:hover{
+
+    background:gold;
+
+    color:#1b3c73;
+
+}
+
+/*MOBILE DESIGN*/
+
+@media(max-width:768px){
+
+}
+#welcome{
+
+        flex-direction:column;
+
+    }
+
+
+    .welcome-image img{
+
+        height:200px;
+
+    }
+
+
+    .welcome-text h2{
+
+        font-size:30px;
+
+    }
+
+/* About Section */
+#about-us {
+    display: flex;
+    justify-content: center;
+    padding: 80px 20px;
+    background: #fafafa;
+}
+
+.about-bubble {
+    max-width: 900px;
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 3px solid rgb(185,164,65);
+}
+
+.about-bubble h2 {
+    text-align: center;
+    color: rgba(1, 30, 4, 0.798);
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.about-bubble p {
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #444;
+}
+
+.did-you-know {
+    width: 320px;
+    background: #fff8dc; /* light gold */
+    border-left: 8px solid #0a4104;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 30px 0 30px 40px; /* left-aligned */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.did-you-know h3 {
+    color: #002147; /* navy */
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.did-you-know p {
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Places both boxes side by side */
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 60px;
+    background: #eef5ff;
+}
+
+/* Did You Know box */
+.did-you-know {
+    width: 30%;
+    background: #fff8dc;
+    border-left: 8px solid #d4af37;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.did-you-know h3 {
+    color: #002147;
+}
+
+.did-you-know p {
+    line-height: 1.6;
+}
+
+/* Notebook box */
+.notebook {
+    width: 60%;
+    background: #fff;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(3, 86, 12, 0.337);
+
+    /* notebook lines */
+    background-image: repeating-linear-gradient(
+        white 0px,
+        white 29px,
+        #d6e7ff 30px
+    );
+
+    border-left: 8px solid #095b0de3;
+    position: relative;
+}
+
+/* notebook holes */
+.notebook::before {
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: 20px;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    box-shadow:
+        0 40px white,
+        0 80px white,
+        0 120px white,
+        0 160px white,
+        0 200px white;
+}
+
+.notebook h2 {
+    color: #002147;
+    margin-bottom: 20px;
+}
+
+.notebook ul {
+    list-style: none;
+    padding: 0;
+}
+
+.notebook li {
+    padding: 10px 0;
+    font-size: 1.1rem;
+}
+
+.layout-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.did-you-know,
+.why-students-section {
+    flex: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 30px;
+    }
+
+    .about-container h2 {
+        font-size: 2rem;
+    }
+
+    .about-container p {
+        font-size: 1rem;
+    }
+}
+
+/*clubs*/
+.club-card {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;           
+    margin-bottom: 40px;    
+    background: #fff;       
+    padding: 20px;          
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    max-width: 550px;       
+    margin-left: auto;      
+    margin-right: auto;     
+}
+.club-images-row {
+    display: flex;
+    gap: 10px;              
+    width: 100%;
+}
+.club-images-row img {
+    width: 50%;             
+    height: 180px;          
+    object-fit: cover;      
+    border-radius: 8px;
+}
+.club-content {
+    width: 100%;
+}
+.clubs-container h2 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+.club-title {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #34495e;
+}
+
+/* GLOBAL STYLES & RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0 40px;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ==========================
+   CAMPUS SECTION
+========================== */
+
+#places {
+    width: 90%;
+    max-width: 1300px;
+    margin: 50px auto;
+}
+
+#places h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0b5d1e;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+#places h2::after {
+    content: "";
+    width: 120px;
+    height: 4px;
+    background: gold;
+    display: block;
+    margin: 15px auto;
+    border-radius: 5px;
+}
+
+/* Card Layout */
+#places {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* Campus Card */
+.campus-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.campus-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.18);
+}
+
+/* Images */
+.campus-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+/* Title */
+.campus-card h3 {
+    color: #0b5d1e;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+/* Paragraphs */
+.campus-card p {
+    padding: 0 20px;
+    margin-bottom: 15px;
+    text-align: justify;
+    color: #555;
+}
+
+/* Interesting Fact */
+.campus-card strong {
+    color: #c49b00;
+}
+
+/* ==========================
+   MOBILE DESIGN
+========================== */
+
+@media (max-width: 768px) {
+
+    #places {
+        width: 95%;
+        grid-template-columns: 1fr;
+    }
+
+    #places h2 {
+        font-size: 2rem;
+    }
+
+    .campus-card img {
+        height: 200px;
+    }
+
+    .campus-card h3 {
+        font-size: 1.3rem;
+    }
+}
+
+   /* 2. CLUB CARDS SECTION */
+   
+.club-card {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;           
+    margin-bottom: 40px;    
+    background: #fff;       
+    padding: 20px;          
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    min-width: 550px;       
+    margin-left: auto;      
+    margin-right: auto;    
+     border: 2px solid #ddd; 
+}
+
+
+.club-images-row {
+    display: flex;
+    gap: 10px;              
+    width: 100%;
+    max-width:100% ;
+border: 2px solid #ddd; 
+}
+
+
+.club-images-row img {
+    flex:1 1 50% ;
+    max-width:50% - 5px ;/* FIXED: Removed the stray forward slash */            
+    height: 180px;          
+    object-fit: cover;      
+    border-radius: 8px;
+    border: 2px solid #ddd; 
+}
+
+.club-content {
+    width: 100%;
+}
+
+.clubs-container h2 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.club-title {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #34495e;
+} 
+
+/* ===========================
+   MEALS SECTION
+=========================== */
+
+.meals {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* Meal Card */
+.meal {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.meal:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+}
+
+/* Images */
+.meal img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Meal Name */
+.meal h3 {
+    color: #0a4d18;
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 15px 0 8px;
+}
+
+/* Price */
+.meal h4 {
+    color: #c49b00;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+/* Description */
+.meal p {
+    padding: 0 20px 20px;
+    text-align: center;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+table {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+th {
+    background: #0a4d18;
+    color: white;
+    padding: 15px;
+    font-size: 1rem;
+}
+
+td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+tr:hover {
+    background: #eef7ef;
+}
+
+/* Rating Stars */
+td:last-child {
+    color: #f4b400;
+    font-size: 1.1rem;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .meal img {
+        height: 180px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* Events table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+table td {
+    padding: 18px;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+    background: #eef8ee;
+}
+
+/* Event information card */
+.card {
+    background: white;
+    padding: 30px;
+    border-left: 8px solid #b9a441;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.card p {
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+.card strong {
+    color: #0b5d1e;
+}
+
+div
+
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px; 
+}
+
+
+.gallery-item {
+    background-color: #fff;
+    background:  #f8f9fa;
+    border: 2px solid #ddd;
+    padding: 60px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    border-color: #3498db;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.caption {
+    margin-top: 15px;
+    text-align: center;
+    color: #555;
+    font-weight: 600;
+    padding: 15px 10px;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*registration form*/
+.registration-container {
+        max-width: 650px;
+        margin: 50px auto; 
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid #eef2f5;
+    }
+    .registration-container h2 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 5px;
+        font-size: 2rem;
+    }
+    .form-subtitle {
+        text-align: center;
+        color: #7f8c8d;
+        margin-bottom: 30px;
+        font-size: 0.95rem;
+    }
+    .form-row {
+        display: flex;
+        gap: 20px;
+    }
+    .form-group {
+        margin-bottom: 22px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    .form-group label {
+        font-weight: 600;
+        color: #34495e;
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+    }
+    .form-group .section-label {
+        margin-bottom: 12px;
+        display: block;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #e0e0e0;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        background-color: #fafbfc;
+        transition: border-color 0.3s ease, background-color 0.3s ease;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        border-color: #3498db;
+        background-color: #fff;
+        outline: none;
+    }
+    .radio-group, .checkbox-group {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 12px;
+        background-color: #fafbfc;
+        padding: 15px;
+        border-radius: 6px;
+        border: 1px solid #eef2f5;
+    }
+    .radio-label, .checkbox-label {
+        font-weight: normal !important;
+        font-size: 0.8rem;
+        color: #555 !important;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+    }
+    .button-group {
+        display: flex;
+        gap: 15px;
+        margin-top: 30px;
+    }
+    .btn {
+        flex: 1;
+        padding: 14px;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.1s ease;
+    }
+    .btn-submit {
+        background-color: #3498db;
+        color: white;
+    }
+    .btn-submit:hover {
+        background-color: #2980b9;
+    }
+    .btn-reset {
+        background-color: #e0e0e0;
+        color: #333;
+    }
+    .btn-reset:hover {
+        background-color: #d5d5d5;
+    }
+    .btn:active {
+        transform: scale(0.98);
+    }
+    @media (max-width: 600px) {
+    }.form-row {
+            flex-direction: column;
+            gap: 0;
+        
+        .registration-container }
+            padding: 20px;
+            margin: 20px;
+    

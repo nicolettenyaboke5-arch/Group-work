@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="campus.css">
+    
+</head>
+<body>
+    
+<section id="Registration">
+<div class="registration-container">
+    <h2>Join Aethelgard University</h2>
+    <p class="form-subtitle">Fill out the form below to register and start your adventure!</p>
+
+    <form action="#" method="POST" class="quest-form">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first_name" placeholder="Anna" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last_name" placeholder="Lee" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="student@university.edu" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="course">Course / Major</label>
+            <input type="text" id="course" name="course" placeholder="e.g., Computer Science, Fine Arts" required>
+        </div>
+        <div class="form-group">
+            <label for="year-of-study">Year of Study</label>
+            <select id="year-of-study" name="year_of_study" required>
+                <option value="" disabled selected>Select your current year</option>
+                <option value="freshman">1st Year (Freshman)</option>
+                <option value="sophomore">2nd Year (Sophomore)</option>
+                <option value="junior">3rd Year (Junior)</option>
+                <option value="senior">4th Year (Senior)</option>
+                <option value="postgrad">Postgraduate</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="section-label">What is your favorite club?</label>
+            <div class="radio-group">
+                <label class="radio-label">
+                    <input type="radio" name="fav_club" value="chess" required> Chess Club
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="fav_club" value="anime"> Anime Club
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="fav_club" value="coding"> Coding Club
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="fav_club" value="photography"> Photography Club
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="fav_club" value="debate"> Debate Club
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="fav_club" value="robotics"> Robotics Club
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="fav_club" value="environmental"> Environmental Club
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="fav_club" value="music"> Music Club
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="section-label">Favorite Campus Meals (Select all that apply)</label>
+            <div class="checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="fav_meal" value="pizza"> Pizza Slice
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="fav_meal" value="burger"> Classic Burger & Fries
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="fav_meal" value="salad"> Fresh Garden Salad
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="fav_meal" value="ramen"> Spicy Ramen Noodles
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="fav_meal" value="tacos"> Street Tacos
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="message">Why do you want to join Aethelgard University? (Message)</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us a little about what you're excited to learn or do..."></textarea>
+        </div>
+        <div class="button-group">
+            <button type="submit" class="btn btn-submit">Join Aethelgard University</button>
+            <button type="reset" class="btn btn-reset">Reset Form</button>
+        </div>
+
+    </form>
+</div>
+</section>
+</body>
+</html>
