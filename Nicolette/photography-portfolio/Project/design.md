@@ -5,10 +5,11 @@ Structure:
 Has a title
 **Biography**
 **Photo gallery**
+Showcasing different Basilicas
 Favourite pictures, ordered list 
 **Contact**
 Labels, buttons, text
-
+Copyright and license
 #CSS
 Visually appealing
 Font size
