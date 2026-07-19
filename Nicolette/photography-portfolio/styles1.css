@@ -1,15 +1,185 @@
-/*/Header*/
-*{
+/*1. GLOBAL ARCHITECTURE & CORE TYPOGRAPHY (Font Family Rule)*/
+* {
     margin: 0;
     padding: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
-/*body*/
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: 180a0a;
-    color: 0b0f12;
-    line-height: 1.6;
-    padding: 40px 20px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background-color: #0f0a14; 
+    color: #e2e8f0; 
+    line-height: 1.7;
+    padding: 50px 20px;
+}
+
+/* 2. SITE HEADER (Font Weight, Style, and Border Structural Rules)*/
+header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    padding-bottom: 40px;
+    border-bottom: 2px solid #2a1f35;
+}
+
+header h1 {
+    font-size: 3.2rem;
+    font-weight: 700; 
+    letter-spacing: 1px;
+    color: #d4af37; /* Burnished Antique Gold accent */
+    text-shadow: 0px 4px 10px rgba(212, 175, 55, 0.15);
+    margin-bottom: 20px;
+}
+
+header p em {
+    font-style: italic; /* Font Style explicit rule */
+    color: #f3e5ab; /* Silk Cream highlight */
+    font-size: 1.25rem;
+}
+
+header p strong {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   3. STRUCTURAL CONTENT CARDS (Block Elements & Overflow Rules)
+   ========================================================================== */
+.main-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Updated selectors to perfectly match your custom HTML classes */
+.biography, .gallery, .form {
+    background-color: #160f1e; /* Deep Obsidian container interior */
+    padding: 40px;
+    margin-bottom: 50px;
+    border-radius: 12px;
+    border: 1px solid #2d1f3d; /* Solid box boundary */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: block; /* Explicit Block Element Layout rule */
+    overflow: hidden; /* Overflow Management rule to protect layouts */
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #d4af37; /* Consistent Antique Gold across segments */
+    font-weight: 600;
+    border-left: 4px solid #6320ee; /* Neon violet edge anchor */
+    padding-left: 15px;
+}
+
+/* External blueprint linkage layout configuration */
+.biography a {
+    color: #f3e5ab;
+    text-decoration: underline;
+    font-size: 0.95rem;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+/* ==========================================================================
+   4. PHOTO GALLERY & PRESENTATION IMAGES (Box Model Configurations)
+   ========================================================================== */
+.photo-list {
+    list-style-position: inside;
+    margin-top: 20px;
+}
+
+.photo-list li {
+    margin-bottom: 45px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #2a1f35;
+}
+
+.photo-list strong {
+    font-size: 1.3rem;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Formatted to handle your side-by-side or stacked basilica images */
+.gallery img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #3c2a52; /* Structured image border wrapper */
+    margin-top: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Interactive Pseudo-Class Hover Snapshot State */
+.gallery img:hover {
+    transform: scale(1.01);
+    border-color: #d4af37; /* Highlights gold upon reader hover mouse gaze */
+    box-shadow: 0 12px 25px rgba(212, 175, 55, 0.2);
+}
+
+/* ==========================================================================
+   5. INTERACTIVE CONTACT FORM SECTOR (Pseudo-classes & Button Controls)
+   ========================================================================== */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 0.95rem;
+    color: #cbd5e0;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    background-color: #0f0a14; /* Inverted background contrast form fills */
+    border: 1px solid #3c2a52;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease;
+}
+
+/* Active field selection behavior configuration */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #d4af37;
+}
+
+/* Submit Action Button styling rules */
+.submit-button {
+    background-color: #d4af37; /* Royal gold interactive button */
+    color: #0f0a14;
+    padding: 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+/* Dynamic Interactive State Button Pseudo-class rule */
+.submit-button:hover {
+    background-color: #f3e5ab; /* Brightens button on user selection hover */
+    box-shadow: 0 6px 20px rgba(243, 229, 171, 0.4);
+    transform: translateY(-1px);
 }
