@@ -127,7 +127,7 @@ header.nav-strip p em {
     margin-bottom: 16px; 
 }
 
-/* SECURES THE SAME SIZE, HORIZONTAL ROW, AND BUBBLE LOOK FOR ALL NEW IMAGES */
+/*same look for everything*/
 .photo-list li img, .image-pair img {
     width: 48%; 
     height: 185px; 
