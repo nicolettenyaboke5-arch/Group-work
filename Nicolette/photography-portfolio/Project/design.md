@@ -11,8 +11,8 @@ Favourite pictures, ordered list
 Labels, buttons, text
 Copyright and license
 #CSS
-Visually appealing
-Font size
-Colors
-Box model
+Visually appealing,
+Font size,
+Colors,
+Box model,
 Interactive states, navigation actions and hovering changing visual 
