@@ -1,4 +1,6 @@
-/*1. GLOBAL ARCHITECTURE & CORE TYPOGRAPHY (Font Family Rule)*/
+/* ==========================================================================
+   1. GLOBAL ARCHITECTURE & ROYAL TYPOGRAPHY (Font Family Rule)
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -6,35 +8,37 @@
 }
 
 body {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    background-color: #0f0a14; 
-    color: #e2e8f0; 
+    font-family: 'Georgia', 'Times New Roman', serif; /* Elegant Majestic Typography */
+    background-color: #1a0f26; /* Deep Velvet Royal Purple Background */
+    color: #ffffff; /* Brilliant Diamond White text for excellent reading contrast */
     line-height: 1.7;
     padding: 50px 20px;
 }
 
-/* 2. SITE HEADER (Font Weight, Style, and Border Structural Rules)*/
+/* ==========================================================================
+   2. ROYAL SITE HEADER (Font Weight, Style, and Border Structural Rules)
+   ========================================================================== */
 header {
     text-align: center;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto 60px auto;
     padding-bottom: 40px;
-    border-bottom: 2px solid #2a1f35;
+    border-bottom: 3px double #d4af37; /* Royal Double Gold Crown Border Line */
 }
 
 header h1 {
-    font-size: 3.2rem;
-    font-weight: 700; 
+    font-size: 3.5rem;
+    font-weight: 700;
     letter-spacing: 1px;
-    color: #d4af37; /* Burnished Antique Gold accent */
-    text-shadow: 0px 4px 10px rgba(212, 175, 55, 0.15);
+    color: #ffffff; /* Bright Regal White Title */
+    text-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
     margin-bottom: 20px;
 }
 
 header p em {
-    font-style: italic; /* Font Style explicit rule */
-    color: #f3e5ab; /* Silk Cream highlight */
-    font-size: 1.25rem;
+    font-style: italic;
+    color: #ff4d6d; /* Imperial Ruby Red Highlight for emphasis */
+    font-size: 1.3rem;
 }
 
 header p strong {
@@ -46,78 +50,94 @@ header p strong {
    3. STRUCTURAL CONTENT CARDS (Block Elements & Overflow Rules)
    ========================================================================== */
 .main-container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
-/* Updated selectors to perfectly match your custom HTML classes */
 .biography, .gallery, .form {
-    background-color: #160f1e; /* Deep Obsidian container interior */
+    background-color: #261438; /* Slightly lighter deep violet card interior */
     padding: 40px;
     margin-bottom: 50px;
     border-radius: 12px;
-    border: 1px solid #2d1f3d; /* Solid box boundary */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid #3d205a; /* Smooth purple boundary */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
     display: block; /* Explicit Block Element Layout rule */
     overflow: hidden; /* Overflow Management rule to protect layouts */
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 25px;
-    color: #d4af37; /* Consistent Antique Gold across segments */
+    color: #ffffff; /* Pure Royal White Subheadings */
     font-weight: 600;
-    border-left: 4px solid #6320ee; /* Neon violet edge anchor */
+    border-left: 5px solid #ff4d6d; /* Imperial Ruby Red Margin Indicator Accent */
     padding-left: 15px;
 }
 
-/* External blueprint linkage layout configuration */
+/* External blueprint linkage configuration */
 .biography a {
-    color: #f3e5ab;
+    color: #ff4d6d; /* Imperial Red active hyperlink */
     text-decoration: underline;
     font-size: 0.95rem;
     display: inline-block;
     margin-top: 15px;
 }
 
+.biography a:hover {
+    color: #ffffff; /* Shifts to White on user hover */
+}
+
 /* ==========================================================================
-   4. PHOTO GALLERY & PRESENTATION IMAGES (Box Model Configurations)
+   4. SIDE-BY-SIDE SIDE PHOTO GALLERY CONFIGURATION
    ========================================================================== */
 .photo-list {
-    list-style-position: inside;
+    list-style: none; /* Removed the numbered list format for a clean grid */
     margin-top: 20px;
 }
 
 .photo-list li {
-    margin-bottom: 45px;
+    margin-bottom: 50px;
     padding-bottom: 30px;
-    border-bottom: 1px solid #2a1f35;
+    border-bottom: 1px solid #3d205a;
 }
 
 .photo-list strong {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: #ffffff;
     display: block;
     margin-bottom: 15px;
 }
 
-/* Formatted to handle your side-by-side or stacked basilica images */
+/* Flexbox layout wrapper to snap your two basilica images perfectly side-by-side */
+.photo-list li br {
+    display: none; /* Hide the line break tag to allow layouts to pair horizontally */
+}
+
+.gallery li {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Spacing gap between the side-by-side pictures */
+    flex-wrap: wrap; /* Automatically wraps safely on small mobile layouts */
+}
+
+/* Image box-model formatting optimized for horizontal placement pairs */
 .gallery img {
+    flex: 1; /* Automatically forces both images to take up equal side-by-side space */
+    min-width: 280px; /* Protection rules so images remain viewable on small screens */
     width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 6px;
-    border: 1px solid #3c2a52; /* Structured image border wrapper */
-    margin-top: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+    height: 250px; /* Consistent locked height for elegant side-by-side balance */
+    object-fit: cover; /* Crops image cleanly inside its frame without squishing it */
+    border-radius: 8px;
+    border: 2px solid #3d205a; /* Purple frame wrapper boundary */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* Interactive Pseudo-Class Hover Snapshot State */
 .gallery img:hover {
-    transform: scale(1.01);
-    border-color: #d4af37; /* Highlights gold upon reader hover mouse gaze */
-    box-shadow: 0 12px 25px rgba(212, 175, 55, 0.2);
+    transform: scale(1.03);
+    border-color: #ff4d6d; /* Highlights Ruby Crimson Red upon reader hover gaze */
+    box-shadow: 0 12px 25px rgba(255, 77, 109, 0.3);
 }
 
 /* ==========================================================================
@@ -137,7 +157,7 @@ h2 {
 
 label {
     font-size: 0.95rem;
-    color: #cbd5e0;
+    color: #e2e8f0;
     font-weight: 500;
     letter-spacing: 0.5px;
 }
@@ -145,25 +165,25 @@ label {
 input, textarea {
     width: 100%;
     padding: 14px;
-    background-color: #0f0a14; /* Inverted background contrast form fills */
-    border: 1px solid #3c2a52;
+    background-color: #1a0f26; /* Matches main theme background */
+    border: 1px solid #3d205a;
     border-radius: 6px;
-    color: #ffffff;
+    color: #ffffff; /* Clean white input input data entries */
     font-size: 1rem;
     font-family: inherit;
     transition: border-color 0.2s ease;
 }
 
-/* Active field selection behavior configuration */
+/* Active field selection input behavior configuration */
 input:focus, textarea:focus {
     outline: none;
-    border-color: #d4af37;
+    border-color: #ff4d6d; /* Velvet crimson focus ring */
 }
 
 /* Submit Action Button styling rules */
 .submit-button {
-    background-color: #d4af37; /* Royal gold interactive button */
-    color: #0f0a14;
+    background-color: #ff4d6d; /* Bold Crimson Ruby Red Button */
+    color: #ffffff; /* High contrast bright white button label font */
     padding: 16px;
     border: none;
     border-radius: 6px;
@@ -174,12 +194,13 @@ input:focus, textarea:focus {
     cursor: pointer;
     margin-top: 10px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+    box-shadow: 0 4px 15px rgba(255, 77, 109, 0.3);
 }
 
 /* Dynamic Interactive State Button Pseudo-class rule */
 .submit-button:hover {
-    background-color: #f3e5ab; /* Brightens button on user selection hover */
-    box-shadow: 0 6px 20px rgba(243, 229, 171, 0.4);
+    background-color: #ffffff; /* Flashes bright pure white on user hover gaze selection */
+    color: #1a0f26; /* Inverts text color to deep purple background match */
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
     transform: translateY(-1px);
 }
