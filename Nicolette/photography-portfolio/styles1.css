@@ -8,36 +8,43 @@
 }
 
 body {
-    font-family: 'Georgia', 'Times New Roman', serif; /* Elegant Majestic Typography */
+    font-family: 'Georgia', 'Times New Roman', serif;
     background-color: #1a0f26; /* Deep Velvet Royal Purple Background */
-    color: #ffffff; /* Brilliant Diamond White text for excellent reading contrast */
+    color: #ffffff; /* Brilliant Diamond White text */
     line-height: 1.7;
-    padding: 50px 20px;
+    padding: 0 0 50px 0; /* Removed top padding to let header go full-width if needed */
 }
 
 /* ==========================================================================
-   2. ROYAL SITE HEADER (Font Weight, Style, and Border Structural Rules)
+   2. ROYAL SITE HEADER (With Background Photo Capabilities)
    ========================================================================== */
 header {
     text-align: center;
-    max-width: 900px;
-    margin: 0 auto 60px auto;
-    padding-bottom: 40px;
+    max-width: 100%;
+    /* Replace the URL below with your own custom header photo link whenever you want! */
+    background-image: linear-gradient(rgba(26, 15, 38, 0.85), rgba(26, 15, 38, 0.95)), 
+                     url('https://unsplash.com');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 20px; /* Enhanced padding to frame the header text inside the image */
+    margin-bottom: 60px;
     border-bottom: 3px double #d4af37; /* Royal Double Gold Crown Border Line */
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
 }
 
 header h1 {
     font-size: 3.5rem;
     font-weight: 700;
     letter-spacing: 1px;
-    color: #ffffff; /* Bright Regal White Title */
-    text-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.8); /* Stronger shadow to pop text off any background photo */
     margin-bottom: 20px;
 }
 
 header p em {
     font-style: italic;
-    color: #ff4d6d; /* Imperial Ruby Red Highlight for emphasis */
+    color: #ff4d6d; /* Imperial Ruby Red Highlight */
     font-size: 1.3rem;
 }
 
@@ -52,31 +59,31 @@ header p strong {
 .main-container {
     max-width: 900px;
     margin: 0 auto;
+    padding: 0 20px; /* Keeps layout crisp on smaller viewports */
 }
 
 .biography, .gallery, .form {
-    background-color: #261438; /* Slightly lighter deep violet card interior */
+    background-color: #261438; /* Deep violet card interior */
     padding: 40px;
     margin-bottom: 50px;
     border-radius: 12px;
-    border: 1px solid #3d205a; /* Smooth purple boundary */
+    border: 1px solid #3d205a; 
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
     display: block; /* Explicit Block Element Layout rule */
-    overflow: hidden; /* Overflow Management rule to protect layouts */
+    overflow: hidden; /* Overflow Management rule */
 }
 
 h2 {
     font-size: 2.2rem;
     margin-bottom: 25px;
-    color: #ffffff; /* Pure Royal White Subheadings */
+    color: #ffffff;
     font-weight: 600;
-    border-left: 5px solid #ff4d6d; /* Imperial Ruby Red Margin Indicator Accent */
+    border-left: 5px solid #ff4d6d; /* Imperial Ruby Red Accent Margin */
     padding-left: 15px;
 }
 
-/* External blueprint linkage configuration */
 .biography a {
-    color: #ff4d6d; /* Imperial Red active hyperlink */
+    color: #ff4d6d;
     text-decoration: underline;
     font-size: 0.95rem;
     display: inline-block;
@@ -84,14 +91,14 @@ h2 {
 }
 
 .biography a:hover {
-    color: #ffffff; /* Shifts to White on user hover */
+    color: #ffffff;
 }
 
 /* ==========================================================================
-   4. SIDE-BY-SIDE SIDE PHOTO GALLERY CONFIGURATION
+   4. SIDE-BY-SIDE GALLERY ROWS (UNCROPPED RENDER)
    ========================================================================== */
 .photo-list {
-    list-style: none; /* Removed the numbered list format for a clean grid */
+    list-style: none;
     margin-top: 20px;
 }
 
@@ -99,44 +106,41 @@ h2 {
     margin-bottom: 50px;
     padding-bottom: 30px;
     border-bottom: 1px solid #3d205a;
+    display: flex; /* Establishes side-by-side flex layout rows */
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap; /* Safe wrapping layout framework for mobile interfaces */
 }
 
 .photo-list strong {
     font-size: 1.4rem;
     color: #ffffff;
-    display: block;
-    margin-bottom: 15px;
+    width: 100%; /* Spans full horizontal container row above picture pair */
+    margin-bottom: 5px;
 }
 
-/* Flexbox layout wrapper to snap your two basilica images perfectly side-by-side */
 .photo-list li br {
-    display: none; /* Hide the line break tag to allow layouts to pair horizontally */
+    display: none; /* Safely flattens inline structural spaces */
 }
 
-.gallery li {
-    display: flex;
-    flex-direction: row;
-    gap: 20px; /* Spacing gap between the side-by-side pictures */
-    flex-wrap: wrap; /* Automatically wraps safely on small mobile layouts */
-}
-
-/* Image box-model formatting optimized for horizontal placement pairs */
+/* Image formatting set to maintain natural aspect ratios without clipping margins */
 .gallery img {
-    flex: 1; /* Automatically forces both images to take up equal side-by-side space */
-    min-width: 280px; /* Protection rules so images remain viewable on small screens */
+    flex: 1;
+    min-width: 280px;
     width: 100%;
-    height: 250px; /* Consistent locked height for elegant side-by-side balance */
-    object-fit: cover; /* Crops image cleanly inside its frame without squishing it */
+    height: auto; /* Removed fixed pixels to unlock height layout parameters */
+    max-height: 450px; /* Prevents portraits or massive dimensions from overstretching screen heights */
+    object-fit: contain; /* CRUCIAL: Displays full images cleanly with no unapproved text or side cropping */
+    background-color: #1a0f26; /* Dark elegant container background filler for unusual image ratios */
     border-radius: 8px;
-    border: 2px solid #3d205a; /* Purple frame wrapper boundary */
+    border: 2px solid #3d205a;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Interactive Pseudo-Class Hover Snapshot State */
 .gallery img:hover {
-    transform: scale(1.03);
-    border-color: #ff4d6d; /* Highlights Ruby Crimson Red upon reader hover gaze */
+    transform: scale(1.02);
+    border-color: #ff4d6d; /* Red highlight flash */
     box-shadow: 0 12px 25px rgba(255, 77, 109, 0.3);
 }
 
@@ -159,31 +163,28 @@ label {
     font-size: 0.95rem;
     color: #e2e8f0;
     font-weight: 500;
-    letter-spacing: 0.5px;
 }
 
 input, textarea {
     width: 100%;
     padding: 14px;
-    background-color: #1a0f26; /* Matches main theme background */
+    background-color: #1a0f26;
     border: 1px solid #3d205a;
     border-radius: 6px;
-    color: #ffffff; /* Clean white input input data entries */
+    color: #ffffff;
     font-size: 1rem;
     font-family: inherit;
     transition: border-color 0.2s ease;
 }
 
-/* Active field selection input behavior configuration */
 input:focus, textarea:focus {
     outline: none;
-    border-color: #ff4d6d; /* Velvet crimson focus ring */
+    border-color: #ff4d6d;
 }
 
-/* Submit Action Button styling rules */
 .submit-button {
-    background-color: #ff4d6d; /* Bold Crimson Ruby Red Button */
-    color: #ffffff; /* High contrast bright white button label font */
+    background-color: #ff4d6d;
+    color: #ffffff;
     padding: 16px;
     border: none;
     border-radius: 6px;
@@ -197,10 +198,10 @@ input:focus, textarea:focus {
     box-shadow: 0 4px 15px rgba(255, 77, 109, 0.3);
 }
 
-/* Dynamic Interactive State Button Pseudo-class rule */
 .submit-button:hover {
-    background-color: #ffffff; /* Flashes bright pure white on user hover gaze selection */
-    color: #1a0f26; /* Inverts text color to deep purple background match */
+    background-color: #ffffff;
+    color: #1a0f26;
     box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
     transform: translateY(-1px);
 }
+
