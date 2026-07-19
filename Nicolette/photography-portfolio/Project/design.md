@@ -10,7 +10,7 @@ Favourite pictures, ordered list
 **Contact**
 Labels, buttons, text
 Copyright and license
-#CSS
+# CSS
 Visually appealing,
 Font size,
 Colors,
